@@ -1,0 +1,45 @@
+From 5c1b05c0b7cb855145861e27128855b217620edd Mon Sep 17 00:00:00 2001
+From: Jerry Sun <jerry.sun@windriver.com>
+Date: Wed, 6 Dec 2017 12:03:30 -0500
+Subject: [PATCH 1/1] add PKG-INFO to prevent build error "Exception:
+ Versioning for this project requires either an sdist tarball, or access to an
+ upstream git repository"
+
+---
+ PKG-INFO | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+ create mode 100644 PKG-INFO
+
+diff --git a/PKG-INFO b/PKG-INFO
+new file mode 100644
+index 0000000..bc08683
+--- /dev/null
++++ b/PKG-INFO
+@@ -0,0 +1,24 @@
++Metadata-Version: 1.1
++Name: python-magnumclient
++Version: 2.7.0
++Summary: Client library for Magnum API
++Home-page: https://docs.openstack.org/python-magnumclient/latest/
++Author: OpenStack
++Author-email: openstack-dev@lists.openstack.org
++License: UNKNOWN
++Description: This is a client library for Magnum built on the Magnum API. It
++        provides a Python API (the ``magnumclient`` module) and a command-line
++        tool (``magnum``).
++
++Platform: UNKNOWN
++Classifier: Environment :: OpenStack
++Classifier: Intended Audience :: Information Technology
++Classifier: Intended Audience :: System Administrators
++Classifier: License :: OSI Approved :: Apache Software License
++Classifier: Operating System :: POSIX :: Linux
++Classifier: Programming Language :: Python
++Classifier: Programming Language :: Python :: 2
++Classifier: Programming Language :: Python :: 2.7
++Classifier: Programming Language :: Python :: 3
++Classifier: Programming Language :: Python :: 3.5
++
+-- 
+2.7.4
+
